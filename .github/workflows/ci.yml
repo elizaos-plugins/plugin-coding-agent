@@ -48,7 +48,7 @@ jobs:
       - name: Setup npm auth
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      - name: Publish to npm (next tag)
-        run: npm publish --tag next --access public
+      - name: Publish to npm (alpha tag)
+        run: npm publish --tag alpha --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
