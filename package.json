@@ -1,6 +1,6 @@
 {
   "name": "@elizaos/plugin-coding-agent",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Coding agent orchestration plugin - spawn and manage CLI coding agents via PTY",
   "type": "module",
   "main": "dist/index.js",
@@ -9,12 +9,13 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "bun": "./src/index.ts",
-      "import": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "bun": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       },
-      "default": "./src/index.ts"
+      "default": "./dist/index.js"
     }
   },
   "files": [
